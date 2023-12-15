@@ -1,16 +1,16 @@
 import React from "react";
 import SideMenuBar from "./SideMenuBar";
 
-function User() {
+function Home() {
   return (
     <div style={{ display: "flex" }}>
       <div>
         <SideMenuBar />
       </div>
 
-      <div>User page</div>
+      <div>Home page</div>
     </div>
   );
 }
 
-export default User;
+export default Home;
