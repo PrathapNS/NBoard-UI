@@ -6,6 +6,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import GroupsIcon from "@mui/icons-material/Groups";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { Fab } from "@mui/material";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function SideMenuBar() {
   const navigate = useNavigate();
@@ -15,7 +17,23 @@ function SideMenuBar() {
     <div id="app" style={{ height: "100vh", display: "flex" }}>
       <Sidebar style={{ height: "100vh", backgroundColor: "#00459b" }}>
         <Menu>
-          <MenuItem
+          <div
+            style={{
+              margin: "10px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-around",
+            }}
+          >
+            <Fab color="lightblue" aria-label="Profile">
+              <AccountCircleIcon
+                style={{ fontSize: "xxx-large", color: "#607d8b" }}
+              />
+            </Fab>
+            <h2>Dashboard</h2>
+          </div>
+          <hr style={{ color: "black" }}></hr>
+          {/* <MenuItem
             icon={<MenuOutlinedIcon />}
             // onClick={() => {
             //   collapseSidebar();
@@ -23,7 +41,7 @@ function SideMenuBar() {
             style={{ textAlign: "center" }}
           >
             <h2>Dashboard</h2>
-          </MenuItem>
+          </MenuItem> */}
           <div style={{ fontSize: "20px" }}>
             <MenuItem icon={<HomeIcon />} onClick={() => navigate("/Home")}>
               Home

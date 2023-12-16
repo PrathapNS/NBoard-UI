@@ -54,7 +54,7 @@ function LoginPage() {
   return (
     <div className="LoginPage">
       <Paper elevation={12} className="LoginPage-Paper">
-        <h1> Ford Announce Net</h1>
+        <h1 style={{ color: "#1a237e" }}> Ford Announce Net</h1>
         <br></br>
         <br></br>
         <div>
