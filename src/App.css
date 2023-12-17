@@ -52,3 +52,12 @@
   width: 220px;
   height: 40px;
 }
+
+.Profile-Modal {
+  height: 500px;
+  width: 500px;
+  margin-top: 150px;
+  margin-left: 550px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
