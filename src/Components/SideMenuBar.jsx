@@ -71,8 +71,8 @@ function SideMenuBar() {
                       marginTop: "100px",
                     }}
                     variant="outlined"
+                    onClick={() => navigate("/")}
                   >
-                    {" "}
                     Logout
                   </Button>
                 </Box>
