@@ -1,6 +1,5 @@
 import React from "react";
 import SideMenuBar from "./SideMenuBar";
-
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -17,6 +16,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Rowing } from "@mui/icons-material";
+
 function User() {
   const [data, setData] = useState([]);
 

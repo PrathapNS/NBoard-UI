@@ -83,7 +83,11 @@ function SideMenuBar() {
           <hr style={{ color: "black" }}></hr>
 
           <div style={{ fontSize: "20px" }}>
-            <MenuItem icon={<HomeIcon />} active onClick={() => navigate("/Home")}>
+            <MenuItem
+              icon={<HomeIcon />}
+              active
+              onClick={() => navigate("/Home")}
+            >
               Home
             </MenuItem>
             <MenuItem icon={<PersonIcon />} onClick={() => navigate("/User")}>
