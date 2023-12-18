@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import { Paper, TextField, colors } from "@mui/material";
+import { Link, Paper, TextField, colors } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
@@ -10,6 +10,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import { Row } from "react-bootstrap";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ function LoginPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/Home")
+    navigate("/Home");
     console.log(CDSIDInput);
     console.log(PasswordInput);
 
@@ -97,19 +98,17 @@ function LoginPage() {
                 label="Password"
               />
             </FormControl>
+            <div style={{ paddingLeft: "135px", fontSize: "17px" }}>
+              <Link href="/P1ForgotPassword">Forgot Password</Link>
+            </div>
           </p>
           <br></br>
           <p>
-            <Stack
-              spacing={2}
-              direction="row"
-              justifyContent={"center"}
-              paddingBottom={"50px"}
-            >
+            <Stack spacing={2} direction="row" justifyContent={"center"}>
               <Button
                 onClick={handleSubmit}
+                style={{ width: "200px", fontSize: "18px" }}
                 variant="contained"
-             
               >
                 Login
               </Button>
