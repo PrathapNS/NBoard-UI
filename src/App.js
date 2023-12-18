@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 import LoginPage from "./Components/LoginPage";
 import Home from "./Components/Home";
 import SideMenuBar from "./Components/SideMenuBar";
-import User from "./Components/User";
-import Team from "./Components/Team";
+import User from "./Components/user";
+import Team from "./Components/team";
 import NewsFeed from "./Components/NewsFeed";
 
 function App() {

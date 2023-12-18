@@ -20,6 +20,7 @@ function LoginPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate("/Home")
     console.log(CDSIDInput);
     console.log(PasswordInput);
 
@@ -45,11 +46,11 @@ function LoginPage() {
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-  const handleMouseDownPassword = (
-    event: React.MouseEvent<HTMLButtonElement>
-  ) => {
-    event.preventDefault();
-  };
+  // const handleMouseDownPassword = (
+  //   event: React.MouseEvent<HTMLButtonElement>
+  // ) => {
+  //   event.preventDefault();
+  // };
 
   return (
     <div className="LoginPage">
@@ -84,7 +85,7 @@ function LoginPage() {
                     <IconButton
                       aria-label="toggle password visibility"
                       onClick={handleClickShowPassword}
-                      onMouseDown={handleMouseDownPassword}
+                      // onMouseDown={handleMouseDownPassword}
                       edge="end"
                     >
                       {showPassword ? <VisibilityOff /> : <Visibility />}
@@ -105,7 +106,7 @@ function LoginPage() {
               <Button
                 onClick={handleSubmit}
                 variant="contained"
-                onClick={() => navigate("/SideMenuBar")}
+             
               >
                 Login
               </Button>
