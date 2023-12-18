@@ -6,6 +6,7 @@ import SideMenuBar from "./Components/SideMenuBar";
 import User from "./Components/user";
 import Team from "./Components/team";
 import NewsFeed from "./Components/NewsFeed";
+import AddNews from "./Components/AddNews";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/User" Component={User} />
           <Route exact path="/Team" Component={Team} />
           <Route exact path="/NewsFeed" Component={NewsFeed} />
+          <Route exact path="/AddNews" Component={AddNews} />
         </Routes>
       </BrowserRouter>
     </div>

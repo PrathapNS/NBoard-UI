@@ -54,13 +54,15 @@ function LoginPage() {
 
   return (
     <div className="LoginPage">
-      <Paper elevation={12}>
-        <header> Ford Announce Net</header>
+      <Paper elevation={12} className="LoginPage-Paper">
+        <h1 style={{ color: "#1a237e" }}> Ford Announce Net</h1>
+        <br></br>
+        <br></br>
         <div>
           <p>
             <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
               <TextField
-                label="CDSID"
+                label="Email"
                 // error={CDSIDError && CDSIDError.length ? true : false}
                 // helperText={CDSIDError}
                 value={CDSIDInput}
@@ -96,6 +98,7 @@ function LoginPage() {
               />
             </FormControl>
           </p>
+          <br></br>
           <p>
             <Stack
               spacing={2}

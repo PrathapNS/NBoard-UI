@@ -1,31 +1,87 @@
 import React from "react";
 import { Sidebar, Menu, MenuItem, useProSidebar } from "react-pro-sidebar";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import GroupsIcon from "@mui/icons-material/Groups";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import "../App.css"
+import { Box, Button, Fab, Typography } from "@mui/material";
+import Tooltip from "@mui/material/Tooltip";
+import logo from "./Ford-Logo.png";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import Modal from "@mui/material/Modal";
 
 function SideMenuBar() {
   const navigate = useNavigate();
-  // const { collapseSidebar } = useProSidebar();
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <div id="app" style={{ height: "100vh", display: "flex" }}>
       <Sidebar style={{ height: "100%", backgroundColor: "#00459b" }}>
         <Menu>
-          <MenuItem className="menubar"
-            icon={<MenuOutlinedIcon />}
-            // onClick={() => {
-            //   collapseSidebar();
-            // }}
-            
-            style={{ textAlign: "center" }}
+          <div
+            style={{
+              margin: "10px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-around",
+            }}
           >
-            <h2>Dashboard</h2>
-          </MenuItem>
+            <Tooltip title="Profile">
+              <Fab onClick={handleOpen} color="lightblue" aria-label="Profile">
+                <AccountCircleIcon
+                  style={{ fontSize: "xxx-large", color: "#607d8b" }}
+                />
+              </Fab>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box className="Profile-Modal">
+                  <AccountCircleIcon
+                    style={{
+                      fontSize: "100px",
+                      marginTop: "30px",
+                      marginLeft: "195",
+                      color: "#607d8b",
+                    }}
+                  />
+                  <h1
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    }}
+                  >
+                    Person 1
+                  </h1>
+                  <Typography style={{ marginTop: "60px", marginLeft: "40px" }}>
+                    <h3>Name : Person 1 </h3>
+                    <h3>Designation : Team Lead </h3>
+                    <h3>Team : FSM</h3>
+                  </Typography>
+                  <Button
+                    style={{
+                      marginLeft: "350px",
+                      marginTop: "100px",
+                    }}
+                    variant="outlined"
+                    onClick={() => navigate("/")}
+                  >
+                    Logout
+                  </Button>
+                </Box>
+              </Modal>
+            </Tooltip>
+            <img style={{ width: "150px" }} src={logo} alt={"logo"} />
+          </div>
+          <hr style={{ color: "black" }}></hr>
+
           <div style={{ fontSize: "20px" }}>
             <MenuItem icon={<HomeIcon />} active onClick={() => navigate("/Home")}>
               Home
